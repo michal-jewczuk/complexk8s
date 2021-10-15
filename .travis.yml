@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t korkhan/client-test -f test ./client/Dockerfile.dev ./client
+  - docker build -t korkhan/client-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true korkhan/client-test npm run test
